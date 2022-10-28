@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Password Generator</title>
     <link rel="stylesheet" href="styles.css">
+   
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
@@ -13,16 +14,16 @@
     <h2>Password generator</h2>
     <div class="wrapper">
         <div class="input-box">
-            <input type="text" value="e7-fjjfjfksk544" disabled>
+            <input type="text"  disabled>
             <span class="material-symbols-outlined">Copy_all</span>
         </div>
        <div class="pass-indicator" ></div>
        <div class="pass-length">
-        <div class="details">
-            <label class="title">Password Length</label>
-            <span class="length">15</span>
-        </div>
-        <input type="range" min="3" max="20" step="1" class="slider">
+            <div class="details">
+                <label class="title">Password Length</label>
+                <span class="length"></span>
+            </div>
+            <input type="range" min="3" max="20" step="1" class="slider">
        </div>
        <div class="pass-settings">
           <label class="title">Password Settings</label>
@@ -39,13 +40,17 @@
                 <input type="checkbox" id="symbols" checked>
                 <label for="symbols">Symbols (!-$-&)</label>
             </li>
-            <li class="option">
+            <!-- <li class="option">
                 <input type="checkbox" id="exc-duplicate" checked>
                 <label for="exc-duplicate">Exclude duplicate</label>
-            </li>
+            </li> -->
             <li class="option">
                 <input type="checkbox" id="spaces" checked>
                 <label for="spaces">Include spaces</label>
+            </li>
+            <li class="option">
+                <input type="checkbox" id="numbers" checked>
+                <label for="numbers">Include Numbers</label>
             </li>
 
           </ul>
@@ -54,7 +59,6 @@
     <button class="generate-btn">Generate Password</button>
 </div>
     
-
-   
+<script src="script.js"></script>
 </body>
 </html>

@@ -38,6 +38,7 @@ body{
     border-radius: 4px;
     border: 1px solid #aaa;
     padding: 0 2.85rem 0 1rem;
+    letter-spacing: 1.4px;
     
 
 }
@@ -63,9 +64,24 @@ body{
     content: "";
     height: 100%;
     width: 50%;
-    background: #f1c80b;
+    /* background: #f1c80b; */
     border-radius: inherit;
+    transition: width 0.3s ease;
 
+}
+.pass-indicator#weak::before{
+    width: 25%;
+    background-color: red;
+
+}
+.pass-indicator#medium::before{
+    width: 50%;
+    background-color: #f1c80b;
+}
+
+.pass-indicator#strong::before{
+    width: 100%;
+    background-color: green;
 }
 .wrapper .pass-length{
     margin: 1.56rem 0 1.25rem;
@@ -93,6 +109,12 @@ body{
    margin-bottom: 1rem;
    width: calc(100%/2)
 }
+.options .option:first-child{
+    pointer-events: none;
+}
+.options .option:first-child input{
+    opacity: 0.7;
+}
 .options .option input{
     height: 16px;
     width: 16px;
@@ -104,11 +126,10 @@ body{
 }
 .wrapper .generate-btn{
     width: 100%;
-    height: 53px;
     background: #4285f4;
     color: #fff;
     font-size: 1.06rem;
-    padding:094rem 0 ;
+    padding:0.94rem 0 ;
     margin: 0.94rem 0 1.3rem;
     font-weight: 500;
     border-radius: 4px;
@@ -117,4 +138,5 @@ body{
     outline: none;
     text-transform: uppercase;
 }
+
 
