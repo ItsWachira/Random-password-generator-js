@@ -46,12 +46,14 @@ const generatePassword = () => {
       
 };
 generatePassword();
-//checking strength of the password
 
+//checking strength of the password
 const UpdatePassIndicator = () => {
     passIndicator.id = lengthSlider.value <= 8 ? "weak" : lengthSlider.value <= 12 ? "medium" : "strong";
 
 };
+
+
 //fuction to update the length of the password
 const  updateLength = () => {
     //passing slider value as length text on span
